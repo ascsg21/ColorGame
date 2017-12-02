@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4A3C2C1FD273FB008C5482 /* pulse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2F4A3C2B1FD273FB008C5482 /* pulse.sks */; };
 		2F59C6A91FD220F700EB0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59C6A81FD220F700EB0327 /* AppDelegate.swift */; };
 		2F59C6AB1FD220F700EB0327 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6AA1FD220F700EB0327 /* GameScene.sks */; };
 		2F59C6AD1FD220F700EB0327 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6AC1FD220F700EB0327 /* Actions.sks */; };
@@ -15,9 +16,17 @@
 		2F59C6B41FD220F700EB0327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6B21FD220F700EB0327 /* Main.storyboard */; };
 		2F59C6B61FD220F700EB0327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6B51FD220F700EB0327 /* Assets.xcassets */; };
 		2F59C6B91FD220F700EB0327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6B71FD220F700EB0327 /* LaunchScreen.storyboard */; };
+		2F59C6C81FD221C200EB0327 /* powerUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C11FD221C200EB0327 /* powerUp.wav */; };
+		2F59C6C91FD221C200EB0327 /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C21FD221C200EB0327 /* move.wav */; };
+		2F59C6CA1FD221C200EB0327 /* MenuHighscoreMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C31FD221C200EB0327 /* MenuHighscoreMusic.mp3 */; };
+		2F59C6CB1FD221C200EB0327 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C41FD221C200EB0327 /* background.wav */; };
+		2F59C6CC1FD221C200EB0327 /* levelCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C51FD221C200EB0327 /* levelCompleted.wav */; };
+		2F59C6CD1FD221C200EB0327 /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C61FD221C200EB0327 /* fail.wav */; };
+		2F59C6CE1FD221C200EB0327 /* levelUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C71FD221C200EB0327 /* levelUp.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F4A3C2B1FD273FB008C5482 /* pulse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = pulse.sks; sourceTree = "<group>"; };
 		2F59C6A51FD220F700EB0327 /* ColorGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F59C6A81FD220F700EB0327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F59C6AA1FD220F700EB0327 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -28,6 +37,13 @@
 		2F59C6B51FD220F700EB0327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F59C6B81FD220F700EB0327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F59C6BA1FD220F700EB0327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F59C6C11FD221C200EB0327 /* powerUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerUp.wav; sourceTree = "<group>"; };
+		2F59C6C21FD221C200EB0327 /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
+		2F59C6C31FD221C200EB0327 /* MenuHighscoreMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MenuHighscoreMusic.mp3; sourceTree = "<group>"; };
+		2F59C6C41FD221C200EB0327 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
+		2F59C6C51FD221C200EB0327 /* levelCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelCompleted.wav; sourceTree = "<group>"; };
+		2F59C6C61FD221C200EB0327 /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
+		2F59C6C71FD221C200EB0327 /* levelUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelUp.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +80,29 @@
 				2F59C6AA1FD220F700EB0327 /* GameScene.sks */,
 				2F59C6AC1FD220F700EB0327 /* Actions.sks */,
 				2F59C6AE1FD220F700EB0327 /* GameScene.swift */,
+				2F4A3C2B1FD273FB008C5482 /* pulse.sks */,
 				2F59C6B01FD220F700EB0327 /* GameViewController.swift */,
 				2F59C6B21FD220F700EB0327 /* Main.storyboard */,
+				2F59C6C01FD221C200EB0327 /* Sounds */,
 				2F59C6B51FD220F700EB0327 /* Assets.xcassets */,
 				2F59C6B71FD220F700EB0327 /* LaunchScreen.storyboard */,
 				2F59C6BA1FD220F700EB0327 /* Info.plist */,
 			);
 			path = ColorGame;
+			sourceTree = "<group>";
+		};
+		2F59C6C01FD221C200EB0327 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2F59C6C11FD221C200EB0327 /* powerUp.wav */,
+				2F59C6C21FD221C200EB0327 /* move.wav */,
+				2F59C6C31FD221C200EB0327 /* MenuHighscoreMusic.mp3 */,
+				2F59C6C41FD221C200EB0327 /* background.wav */,
+				2F59C6C51FD221C200EB0327 /* levelCompleted.wav */,
+				2F59C6C61FD221C200EB0327 /* fail.wav */,
+				2F59C6C71FD221C200EB0327 /* levelUp.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +166,17 @@
 			files = (
 				2F59C6B41FD220F700EB0327 /* Main.storyboard in Resources */,
 				2F59C6AB1FD220F700EB0327 /* GameScene.sks in Resources */,
+				2F59C6CB1FD221C200EB0327 /* background.wav in Resources */,
+				2F59C6CC1FD221C200EB0327 /* levelCompleted.wav in Resources */,
+				2F59C6CE1FD221C200EB0327 /* levelUp.wav in Resources */,
 				2F59C6B61FD220F700EB0327 /* Assets.xcassets in Resources */,
+				2F59C6C91FD221C200EB0327 /* move.wav in Resources */,
+				2F4A3C2C1FD273FB008C5482 /* pulse.sks in Resources */,
 				2F59C6B91FD220F700EB0327 /* LaunchScreen.storyboard in Resources */,
 				2F59C6AD1FD220F700EB0327 /* Actions.sks in Resources */,
+				2F59C6CD1FD221C200EB0327 /* fail.wav in Resources */,
+				2F59C6CA1FD221C200EB0327 /* MenuHighscoreMusic.mp3 in Resources */,
+				2F59C6C81FD221C200EB0327 /* powerUp.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
