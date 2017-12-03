@@ -23,6 +23,9 @@
 		2F59C6CC1FD221C200EB0327 /* levelCompleted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C51FD221C200EB0327 /* levelCompleted.wav */; };
 		2F59C6CD1FD221C200EB0327 /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C61FD221C200EB0327 /* fail.wav */; };
 		2F59C6CE1FD221C200EB0327 /* levelUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2F59C6C71FD221C200EB0327 /* levelUp.wav */; };
+		2F8D35B91FD3E80B00CC17DF /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D35B81FD3E80B00CC17DF /* GameElements.swift */; };
+		2F8D35BB1FD3E82000CC17DF /* GameFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D35BA1FD3E82000CC17DF /* GameFunctions.swift */; };
+		2F8D35C51FD3EF4F00CC17DF /* fireworks.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2F8D35C41FD3EF4F00CC17DF /* fireworks.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		2F59C6C51FD221C200EB0327 /* levelCompleted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelCompleted.wav; sourceTree = "<group>"; };
 		2F59C6C61FD221C200EB0327 /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
 		2F59C6C71FD221C200EB0327 /* levelUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelUp.wav; sourceTree = "<group>"; };
+		2F8D35B81FD3E80B00CC17DF /* GameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
+		2F8D35BA1FD3E82000CC17DF /* GameFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFunctions.swift; sourceTree = "<group>"; };
+		2F8D35C41FD3EF4F00CC17DF /* fireworks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = fireworks.sks; path = ../fireworks.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				2F59C6A81FD220F700EB0327 /* AppDelegate.swift */,
-				2F59C6AA1FD220F700EB0327 /* GameScene.sks */,
-				2F59C6AC1FD220F700EB0327 /* Actions.sks */,
-				2F59C6AE1FD220F700EB0327 /* GameScene.swift */,
-				2F4A3C2B1FD273FB008C5482 /* pulse.sks */,
 				2F59C6B01FD220F700EB0327 /* GameViewController.swift */,
+				2F8D35B61FD3E6CA00CC17DF /* Game Scenes */,
+				2F8D35B71FD3E6EA00CC17DF /* Particles */,
+				2F59C6AE1FD220F700EB0327 /* GameScene.swift */,
+				2F8D35B81FD3E80B00CC17DF /* GameElements.swift */,
+				2F8D35BA1FD3E82000CC17DF /* GameFunctions.swift */,
+				2F59C6AC1FD220F700EB0327 /* Actions.sks */,
 				2F59C6B21FD220F700EB0327 /* Main.storyboard */,
 				2F59C6C01FD221C200EB0327 /* Sounds */,
 				2F59C6B51FD220F700EB0327 /* Assets.xcassets */,
@@ -103,6 +111,23 @@
 				2F59C6C71FD221C200EB0327 /* levelUp.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		2F8D35B61FD3E6CA00CC17DF /* Game Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2F59C6AA1FD220F700EB0327 /* GameScene.sks */,
+			);
+			path = "Game Scenes";
+			sourceTree = "<group>";
+		};
+		2F8D35B71FD3E6EA00CC17DF /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				2F4A3C2B1FD273FB008C5482 /* pulse.sks */,
+				2F8D35C41FD3EF4F00CC17DF /* fireworks.sks */,
+			);
+			path = Particles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +193,7 @@
 				2F59C6AB1FD220F700EB0327 /* GameScene.sks in Resources */,
 				2F59C6CB1FD221C200EB0327 /* background.wav in Resources */,
 				2F59C6CC1FD221C200EB0327 /* levelCompleted.wav in Resources */,
+				2F8D35C51FD3EF4F00CC17DF /* fireworks.sks in Resources */,
 				2F59C6CE1FD221C200EB0327 /* levelUp.wav in Resources */,
 				2F59C6B61FD220F700EB0327 /* Assets.xcassets in Resources */,
 				2F59C6C91FD221C200EB0327 /* move.wav in Resources */,
@@ -187,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8D35BB1FD3E82000CC17DF /* GameFunctions.swift in Sources */,
+				2F8D35B91FD3E80B00CC17DF /* GameElements.swift in Sources */,
 				2F59C6AF1FD220F700EB0327 /* GameScene.swift in Sources */,
 				2F59C6B11FD220F700EB0327 /* GameViewController.swift in Sources */,
 				2F59C6A91FD220F700EB0327 /* AppDelegate.swift in Sources */,
