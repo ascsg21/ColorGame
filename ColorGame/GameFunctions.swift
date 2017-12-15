@@ -76,10 +76,24 @@ extension GameScene {
     }
     
     func spwanEnemies () {
+        
+        var randomTrackNumber = 0
+        let createPowerUp = GKRandomSource.sharedRandom().nextBool()
+        
+        if createPowerUp {
+            randomTrackNumber = GKRandomSource.sharedRandom().nextInt(upperBound: 6) + 1
+            if let powerUpObject = self.createPowerUp(forTrack: randomTrackNumber) {
+                self.addChild(powerUpObject)
+            }
+        }
+        
         for i in 1 ... 7 {
-            let randomEnemy = Enemies(rawValue: GKRandomSource.sharedRandom().nextInt(upperBound: 3))!
-            if let newEnemy = createEnemy(type: randomEnemy, forTrack: i) {
-                self.addChild(newEnemy)
+            
+            if randomTrackNumber != i {
+                let randomEnemy = Enemies(rawValue: GKRandomSource.sharedRandom().nextInt(upperBound: 3))!
+                if let newEnemy = createEnemy(type: randomEnemy, forTrack: i) {
+                    self.addChild(newEnemy)
+                }
             }
         }
         
@@ -110,4 +124,17 @@ extension GameScene {
             self.movePlayerToStart()
         }
     }
+    
+    func gameOver() {
+        GameHandler.sharedInstance.saveGameStats()
+        
+        self.run(SKAction.playSoundFileNamed("levelCompleted.wav", waitForCompletion: true))
+        
+        let transition = SKTransition.fade(withDuration: 1)
+        if let gameOverScene = SKScene(fileNamed: "GameOverScene") {
+            gameOverScene.scaleMode = .aspectFit
+            self.view?.presentScene(gameOverScene, transition: transition)
+        }
+    }
+    
 }

@@ -18,11 +18,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player:SKSpriteNode?
     var target:SKSpriteNode?
     
+    var pause:SKSpriteNode?
     var timeLabel:SKLabelNode?
     var scoreLabel:SKLabelNode?
     var currentScore:Int = 0 {
         didSet {
             self.scoreLabel?.text = "SCORE: \(self.currentScore)"
+            GameHandler.sharedInstance.score = currentScore
         }
     }
     var remainingTime:TimeInterval = 60 {
@@ -51,6 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let playerCategory:UInt32 = 0x1 << 0 // 플레이어 카테고리 bitmask
     let enemyCategory:UInt32 = 0x1 << 1  // 장애물 카테고리 bitmask
     let targetCategory:UInt32 = 0x1 << 2 // 타겟 카테고리 bitmask
+    let powerUpCategory:UInt32 = 0x1 << 3 // powerUp 카테고리 bitmask
     
     override func didMove(to view: SKView) {
         setupTracks()
@@ -98,11 +101,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             // 노드 name 을 가지고 분기 처리
             if node?.name == "right" {
-                moveToNextTrack()
+                if currentTrack < 8 {
+                    moveToNextTrack()
+                }
             } else if node?.name == "up" {
                 moveVertically(up: true)
             } else if node?.name == "down" {
                 moveVertically(up: false)
+            } else if node?.name == "pause", let scene = self.scene {
+                if scene.isPaused {
+                    scene.isPaused = false
+                } else {
+                    scene.isPaused = true
+                }
             }
         }
     }
@@ -137,6 +148,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             movePlayerToStart()
         } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == targetCategory {
             nextLevel(playerPhysicsBody: playerBody)
+        } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == powerUpCategory {
+            self.run(SKAction.playSoundFileNamed("powerUp.wav", waitForCompletion: true))
+            otherBody.node?.removeFromParent()
+            remainingTime += 5
         }
     }
     
@@ -151,6 +166,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if remainingTime <= 5 {
             timeLabel?.fontColor = UIColor.red
+        }
+        
+        if remainingTime == 0 {
+            gameOver()
         }
     }
 }
